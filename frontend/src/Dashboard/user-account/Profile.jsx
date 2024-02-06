@@ -97,8 +97,7 @@ const Profile = ({user}) => {
               focus:border-b primaryColor text-[16px] leading-7 text-headingColor
               placeholder:text-textColor rounded-md cursor-pointer"
               
-              aria-readonly
-              readOnly
+             required
           />
         </div>
 
