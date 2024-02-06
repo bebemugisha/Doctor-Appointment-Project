@@ -12,7 +12,7 @@ const MyBookings = () => {
   } = useFetchData(`${BASE_URL}/users/appointments/my-appointments`)
   return (
     <div>
-      {!loading && !error && <Loading />}
+      {loading && !error && <Loading />}
 
       {error && !loading && <Error errMessage={error} />}
 

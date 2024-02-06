@@ -70,7 +70,7 @@ const Profile = ({user}) => {
     }
   }
   return (
-    <div className='mt-10'>
+    <div className="mt-10">
       <form onSubmit={submitHandler}>
         <div className="mb-5">
           <input
@@ -96,7 +96,7 @@ const Profile = ({user}) => {
             className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
               focus:border-b primaryColor text-[16px] leading-7 text-headingColor
               placeholder:text-textColor rounded-md cursor-pointer"
-             required
+            required
           />
         </div>
 
@@ -110,7 +110,6 @@ const Profile = ({user}) => {
             className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
               focus:border-b primaryColor text-[16px] leading-7 text-headingColor
               placeholder:text-textColor rounded-md cursor-pointer"
-
           />
         </div>
 
@@ -151,7 +150,11 @@ const Profile = ({user}) => {
               className="w-[60px] h-[60px] rounded-full border-2 border-solid border-primaryColor
                 flex items-center justify-center"
             >
-              <img src={formData.photo} alt="" className="w-full rounded-full" />
+              <img
+                src={formData.photo}
+                alt=""
+                className="w-full rounded-full"
+              />
             </figure>
           )}
 
@@ -181,7 +184,7 @@ const Profile = ({user}) => {
             type="submit"
             className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3"
           >
-            { loading ? <HashLoader size={25} color="#ffffff" /> : 'Update'}
+            {loading ? <HashLoader size={25} color="#ffffff" /> : 'Update'}
           </button>
         </div>
       </form>
