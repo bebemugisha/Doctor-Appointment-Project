@@ -40,7 +40,7 @@ reviewSchema.statics.calcAverageRatings = async function(doctorId){
 
   // this points the current review//
 
-  const stats = await this.aggregate([{
+  const starts = await this.aggregate([{
     $match:{ doctor:doctorId }
   },
   {
@@ -55,8 +55,8 @@ reviewSchema.statics.calcAverageRatings = async function(doctorId){
 
 
 await  Doctor.findByIdAndUPdate(doctorId, {
-  totalRating: stats[0].numOfRating,
-  averageRating: stats[0].avgRating,
+  totalRating: starts[0].numOfRating,
+  averageRating: starts[0].avgRating,
 });
 };
 

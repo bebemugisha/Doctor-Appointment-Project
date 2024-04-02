@@ -84,7 +84,7 @@ const Footer = () => {
           <div>
             <img src={logo} alt="" />
             <p className="text-[16px] leading-7 font-[400] text-textColor">
-              Copyright &copy; {year} developed by Mugisha Bernice all right
+              Copyright &copy; {year} developed by Christella Munezero all right
               reserve.
             </p>
             <div className="flex items-center gap-3 mt-4">

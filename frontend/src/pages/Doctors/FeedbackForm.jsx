@@ -20,26 +20,27 @@ const FeedbackForm = () => {
         try {
           if(!rating || !reviewText){
             setLoading(false)
-            toast.error('Rating & Review Fields are required')
+           return toast.error('Rating & Review Fields are required');
+          }
 
-            const res = await fetch(`${BASE_URL}/doctors/${id}/reviews`,{
-              method:'post',
-              headers:{
-                'content-Type':'application/json',
-                Authorization:`Bearer ${token}`
+          
+            const res = await fetch(`${BASE_URL}/doctors/${id}/reviews`, {
+              method: 'post',
+              headers: {
+                'content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
               },
-              body: JSON.stringify({rating,reviewText})
+              body: JSON.stringify({ rating, reviewText }),
             })
 
             const result = await res.json()
-            if(!res.ok){
+            if (!res.ok) {
               throw new Error(result.message)
             }
 
             setLoading(false)
             toast.success(result.message)
 
-          }
         } catch (err) {
           setLoading(false)
           toast.error(err.message)
