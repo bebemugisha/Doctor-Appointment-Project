@@ -30,14 +30,14 @@ const Home = () => {
             {/*==== hello content ====*/}
             <div>
               <div className="lg:w-[570]">
-                <h1 className="text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px] md:leading-[70px]">
+                <h1 className="text-[12px] leading-[36px] text-headingColor font-[800] md:text-[60px] md:leading-[60px]">
                   we help patients live a healthy, longer life.
                 </h1>
                 <p className="text_para">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Placeat, architecto, quod temporibus natus nemo odit facere
-                  voluptates totam maxime, quisquam explicabo quas animi tempora
-                  neque. Quia vitae quo quam fugit!
+                  We are committed to empowering patients, including
+                  marginalized communities like the Mahama people, alongside
+                  individuals worldwide, to lead healthy, fulfilling lives
+                  through our comprehensive healthcare and support initiatives.!
                 </p>
 
                 <button className="btn">Request an Appointment</button>
@@ -234,7 +234,7 @@ const Home = () => {
                 className="w-[150px] lg:w-[248px] bg-white absolute bottom-[50px] left-0 md:bottom-
                 [100px] md:left-5 z-20 p-2 pb-3 lg:pt-4 lg:px-4 lg:pb-[26px] rounded-[10px]"
               >
-                <div className="flex items-center justify-between">     
+                <div className="flex items-center justify-between">
                   <div className="flex items-center gap-[60px] lg:gap-[3]">
                     <p
                       className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-headingColor
@@ -328,7 +328,7 @@ const Home = () => {
               expert health care.
             </p>
           </div>
-          <Testimonial/>
+          <Testimonial />
         </div>
       </section>
 

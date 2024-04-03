@@ -53,9 +53,9 @@ const Header = () => {
   return (
     <header className="header flex items-center" ref={headerRef}>
       <div className="container">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between  ">
           {/* =======logo======= */}
-          <div>
+          <div className="w-[150px]">
             <img src={logo} alt="" />
           </div>
 
@@ -81,31 +81,34 @@ const Header = () => {
 
           {/* =========nav right========== */}
           <div className="flex items-center gap-4">
-
-
-            {
-              token && user ? (
-                <div>
-              <Link to={`${role==='doctor' ? '/doctors/profile/me' : 'users/profile/me'}`}>
-                <figure className="w-[35px] h-[35px] rounded-full cursor-pointer">
-                  <img src={user?.photo} className="w-full rounded-full" alt="" />
-                </figure>
-              </Link>
-            </div> 
-            ) :(
-
-             <Link to="/login">
-              <button
-                className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center
+            {token && user ? (
+              <div>
+                <Link
+                  to={`${
+                    role === 'doctor'
+                      ? '/doctors/profile/me'
+                      : 'users/profile/me'
+                  }`}
+                >
+                  <figure className="w-[35px] h-[35px] rounded-full cursor-pointer">
+                    <img
+                      src={user?.photo}
+                      className="w-full rounded-full"
+                      alt=""
+                    />
+                  </figure>
+                </Link>
+              </div>
+            ) : (
+              <Link to="/login">
+                <button
+                  className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center
               justify-center rounded-[50px]"
-              >
-                Login
-              </button>
-            </Link>
+                >
+                  Login
+                </button>
+              </Link>
             )}
-            
-
-           
 
             <span className="md:hidden" onClick={toggleMenu}>
               <BiMenu className="w-6 h-6 cursor-pointer" />
@@ -114,7 +117,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  );
+  )
 };
 
 export default Header
