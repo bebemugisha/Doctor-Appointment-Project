@@ -12,9 +12,9 @@ const MyBookings = () => {
   } = useFetchData(`${BASE_URL}/users/appointments/my-appointments`)
   return (
     <div>
-      {!loading && !error && <Loading />}
+      { loading && !error && <Loading />}
 
-      {error && !loading && <Error errMessage={error} />}
+      { error && !loading && <Error errMessage={error} />}
 
       {!loading && !error && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">

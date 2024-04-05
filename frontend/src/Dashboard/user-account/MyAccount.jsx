@@ -4,7 +4,7 @@ import MyBookings from './MyBookings.jsx'
 import Profile from './Profile.jsx'
 import useGetProfile from '../../hooks/useFetchData.jsx'
 import { BASE_URL } from '../../config.js'
-import Loading from '../../component/loader/Loading.jsx'
+import Loading from '../../component/loader/Loading';
 import Error from '../../component/Error/Error.jsx'
 
 const MyAccount = () => {
@@ -23,12 +23,14 @@ const MyAccount = () => {
     dispatch({ type: 'LOGOUT' });
   }
 
+
+
   return (
     <section>
       <div className="max-w-[1170px] px-5 mx-auto">
-        {!loading && !error && <Loading />}
+        { loading && !error && <Loading />}
 
-        {error && !loading && <Error errMessage={error} />}
+        { error && !loading && <Error errMessage={error} />}
 
         {!loading && !error && (
           <div className="grid md:grid-cols-3 gap-10">
@@ -66,7 +68,10 @@ const MyAccount = () => {
                   Logout
                 </button>
 
-                <button className="w-full bg-red-600 mt-4 p-3 text-[16px] leading-7 rounded-md text-white">
+                <button
+
+                  className="w-full bg-red-600 mt-4 p-3 text-[16px] leading-7 rounded-md text-white"
+                >
                   Delete account
                 </button>
               </div>

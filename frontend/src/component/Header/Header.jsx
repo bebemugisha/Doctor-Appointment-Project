@@ -55,7 +55,7 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between  ">
           {/* =======logo======= */}
-          <div className="w-[150px]">
+          <div className="w-[200px]">
             <img src={logo} alt="" />
           </div>
 
